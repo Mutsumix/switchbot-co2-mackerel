@@ -41,7 +41,7 @@ def send_data_to_mackerel(api_key, service_name, data):
             {
                 "name": "switchbot.co2",
                 "time": current_time,
-                "value": data['CO2']
+                "value": data['co2']
             }
         ]
         logger.debug(f"送信するメトリクス: {metrics}")
@@ -59,7 +59,7 @@ def send_data_to_mackerel(api_key, service_name, data):
             logger.info("Data sent to Mackerel successfully")
             logger.info(f"Temperature: {data['temperature']}°C, "
                        f"Humidity: {data['humidity']}%, "
-                       f"CO2: {data['CO2']}ppm")
+                       f"CO2: {data['co2']}ppm")
             return True
         except requests.exceptions.RequestException as e:
             logger.error(f"Mackerel APIリクエストエラー: {str(e)}")
