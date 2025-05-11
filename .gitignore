@@ -52,10 +52,4 @@ Thumbs.db
 *.log
 
 # Project specific
-switchbot-lambda.zip
-switchbot-lambda/
-deployment.zip
-build/
 package/
-lambda.zip
-
